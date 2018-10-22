@@ -1,20 +1,27 @@
 # Memory Game Project
 
-## Table of Contents
+## Overview
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+This is a web game where the player is expected to match images in the card. This game has 8-pairs of images (2 x 8 = 16) and every time two consecutive cards are similiar, the cards are kept open. The game is fun!!! Good Luck!!!
 
-## Instructions
+## This Repo
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+This repository has files that allows the game to run. The project has it's **stylesheet**, **images** and **javascript** files placed in the **css**, **images** and **js** folders respectively. THe readme and index(html fill) are not placed in any folder.
 
-To get started, open `js/app.js` and start building out the app's functionality
+### Like to Download/Clone this Repo
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+To download this repository,
+* click **Clone or Download**.
+* choose most suitable option and there, you have it.
 
-## Contributing
+### How to use downloaded/cloned Repo
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+* **index.html** is the one and basic html file. This file is used to display the cards and it's holder.
+* **style.css** is the one and basic css file and is found in the **css** folder. This file is style the HTML.
+* **app.js** is the javascript files and is found in the **js** folder. This file has classes and/or functions that
+  * make card deck random.
+  * animate if card match and do not match.
+  * keep card displaying if pair match.
+  * count scores and regulate star(s) display.
+  * enables restart, reset and refresh.
+  * resets game and add point if Player reaches the top.

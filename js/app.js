@@ -96,10 +96,36 @@ function shuffle(array) {
 
 let gameMoves = 0;
 let gameScore;
+let playerRating = 3;
+
+let minBestMove = 16;
+let maxBestMove = 24; //a chance of 8 extra moves
 
 let scores = function(){
 	gameScore = ((100/gameMoves) * 50);
 	gameScore = (Math.round(gameScore * 100))/100;
+}
+
+let gameStar = function(){
+    console.log('Game rating called');
+    var elementStar = document.getElementById('theStars');
+    console.log(elementStar);
+    if (gameMoves === minBestMove) {
+        playerRating = 3;
+        console.log('New rating at 3 star: ' + playerRating);
+        console.log(elementStar);
+    }
+    else if ((gameMoves > minBestMove) && (gameMoves <= maxBestMove)) { 
+        elementStar.innerHTML = '<li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li>';
+        playerRating = 2;
+        console.log('New rating at 2 stars: ' + playerRating);
+        console.log(elementStar);
+    } else if (gameMoves > maxBestMove) {
+        elementStar.innerHTML = '<li><i class="fa fa-star"></i></li>';
+        playerRating = 1;
+        console.log('New rating at 1 star: ' + playerRating);
+        console.log(elementStar);
+    }
 }
 
 removeProperties = function(prop) {
@@ -113,6 +139,8 @@ removeProperties = function(prop) {
 showCardOnClick = function(clickEvent) {
     clickEvent.on('click', function() {
         gameMoves++;
+        gameStar();
+        console.log(gameMoves);
         $('.moves').html(gameMoves);
         if ((listOfOpenCards.length % 2) === 0) {
             $(this).addClass('show open animated wobble');
@@ -142,12 +170,17 @@ showCardOnClick = function(clickEvent) {
         }
         if ($('.deck').find('.match').length === 16) {
         	scores();
+            gameStar();
             setTimeout(function() {
                 $('.deck').each(function() {
                     swal({
                         title: 'Congratulations',
                         type: 'success',
-                        text: 'You have won the game. It took ' + gameMoves + ' moves, so your Score is ' + gameScore + '. Time taken to complete this game is ' + playedhrs + ' Hours ' + playedMins + ' Minutes and ' + playedSec + ' Seconds. Nice Job!!',
+                        text: 'You have won the game. It took ' + gameMoves + 
+                            ' moves, so your Score is ' + gameScore + 
+                            '. Time taken to complete this game is ' + playedhrs + 
+                            ' Hours ' + playedMins + 
+                            ' Minutes and ' + playedSec + ' Seconds. You have a rating of ' + playerRating + ' stars.',
                         allowOutsideClick: false,
                         showCancelButton: true,
                         confirmButtonText: 'Play Again',

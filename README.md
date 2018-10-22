@@ -16,6 +16,10 @@ To download this repository,
 
 ### How to use downloaded/cloned Repo
 
+```
+Ensure you have [Sublime Text](https://www.sublimetext.com/3) or [Visual studio code](https://code.visualstudio.com/) so you can do good editing and reading of files if you use a windows OS. Get [Atom](https://atom.io/) if you use IOS.
+```
+
 * **index.html** is the one and basic html file. This file is used to display the cards and it's holder.
 * **style.css** is the one and basic css file and is found in the **css** folder. This file is style the HTML.
 * **app.js** is the javascript files and is found in the **js** folder. This file has classes and/or functions that

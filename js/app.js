@@ -98,6 +98,7 @@ let gameMoves = 0;
 let gameScore;
 let playerRating = 3;
 
+//Count the number of flips. A perfect flip will be 16, that is getting every click on the 16 cards correct
 let minBestMove = 16;
 let maxBestMove = 24; //a chance of 8 extra moves
 

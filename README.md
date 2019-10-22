@@ -1,5 +1,8 @@
 # Memory Game Project
 
+##Play
+[Play Here](https://ebereuzodufa.github.io/fend-project-memory-game/).
+
 ## Overview
 
 This is a web game where the player is expected to match images in the card. This game has 8-pairs of images (2 x 8 = 16) and every time two consecutive cards are similiar, the cards are kept open. The game is fun!!! Good Luck!!!
